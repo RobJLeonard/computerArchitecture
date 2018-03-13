@@ -121,6 +121,7 @@ BEGIN
    		
 		wait for 10ns;
 		-- set data_load to 0 (from data input line)
+		-- shows that reg 0 won't load without write <= '1'
 		write <= '0';
 		des_select <= "000";
 		data <= x"0000";

@@ -40,14 +40,14 @@ end mux_8_16;
 architecture Behavioral of mux_8_16 is
 
 begin
-	z <= 	in0 after 5ns when s0 = '0' and s1 ='0' and s2 ='0' else
-			in1 after 5ns when s0 = '0' and s1 ='0' and s2 ='1' else
-			in2 after 5ns when s0 = '0' and s1 ='1' and s2 ='0' else
-			in3 after 5ns when s0 = '0' and s1 ='1' and s2 ='1' else
-			in4 after 5ns when s0 = '1' and s1 ='0' and s2 ='0' else
-			in5 after 5ns when s0 = '1' and s1 ='0' and s2 ='1' else
-			in6 after 5ns when s0 = '1' and s1 ='1' and s2 ='0' else
-			in7 after 5ns when s0 = '1' and s1 ='1' and s2 ='1' else
+	z <= 	in0 after 5ns when s2 = '0' and s1 ='0' and s0 ='0' else
+			in1 after 5ns when s2 = '0' and s1 ='0' and s0 ='1' else
+			in2 after 5ns when s2 = '0' and s1 ='1' and s0 ='0' else
+			in3 after 5ns when s2 = '0' and s1 ='1' and s0 ='1' else
+			in4 after 5ns when s2 = '1' and s1 ='0' and s0 ='0' else
+			in5 after 5ns when s2 = '1' and s1 ='0' and s0 ='1' else
+			in6 after 5ns when s2 = '1' and s1 ='1' and s0 ='0' else
+			in7 after 5ns when s2 = '1' and s1 ='1' and s0 ='1' else
 			x"0000" after 5ns;
 
 end Behavioral;

@@ -4,7 +4,7 @@
 -- 
 -- Create Date:    
 -- Design Name: 
--- Module Name:    register16_bit - Behavioral 
+-- Module Name:    
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 

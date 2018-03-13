@@ -39,13 +39,13 @@ end decoder;
 architecture Behavioral of decoder is
 
 begin
-	q0 <= ((not a0) and (not a1) and (not a2)) after 5ns; --000
-	q1 <= ((not a0) and (not a1) and (a2)) after 5ns;		--001
-	q2 <= ((not a0) and (a1) and (not a2)) after 5ns;		--010
-	q3 <= ((not a0) and (a1) and (a2)) after 5ns;			--011
-	q4 <= ((a0) and (not a1) and (not a2)) after 5ns;		--100
-	q5 <= ((a0) and (not a1) and (a2)) after 5ns;			--101
-	q6 <= ((a0) and (a1) and (not a2)) after 5ns;			--110
-	q7 <= ((a0) and (a1) and (a2)) after 5ns;					--111
+	q0 <= ((not a2) and (not a1) and (not a0)) after 5ns;  --000
+	q1 <= ((not a2) and (not a1) and (a0)) after 5ns;		--001
+	q2 <= ((not a2) and (a1) and (not a0)) after 5ns;		--010
+	q3 <= ((not a2) and (a1) and (a0)) after 5ns;			--011
+	q4 <= ((a2) and (not a1) and (not a0)) after 5ns;		--100
+	q5 <= ((a2) and (not a1) and (a0)) after 5ns;			--101
+	q6 <= ((a2) and (a1) and (not a0)) after 5ns;			--110
+	q7 <= ((a2) and (a1) and (a0)) after 5ns;					--111
 
 end Behavioral;
