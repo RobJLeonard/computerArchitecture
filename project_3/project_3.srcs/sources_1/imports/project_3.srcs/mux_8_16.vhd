@@ -31,8 +31,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux_8_16 is
 	Port(
-			in0, in1, in2, in3, in4, in5, in6, in7 : in STD_LOGIC_VECTOR(15 downto 0);
-			s0, s1, s2: in STD_LOGIC;
+			in0, in1, in2, in3, in4, in5, in6, in7, in8 : in STD_LOGIC_VECTOR(15 downto 0);
+			s0, s1, s2, sControl: in STD_LOGIC;
 			z : out STD_LOGIC_VECTOR(15 downto 0)
 		);
 end mux_8_16;
@@ -40,14 +40,15 @@ end mux_8_16;
 architecture Behavioral of mux_8_16 is
 
 begin
-	z <= 	in0 after 5ns when s2 = '0' and s1 ='0' and s0 ='0' else
-			in1 after 5ns when s2 = '0' and s1 ='0' and s0 ='1' else
-			in2 after 5ns when s2 = '0' and s1 ='1' and s0 ='0' else
-			in3 after 5ns when s2 = '0' and s1 ='1' and s0 ='1' else
-			in4 after 5ns when s2 = '1' and s1 ='0' and s0 ='0' else
-			in5 after 5ns when s2 = '1' and s1 ='0' and s0 ='1' else
-			in6 after 5ns when s2 = '1' and s1 ='1' and s0 ='0' else
-			in7 after 5ns when s2 = '1' and s1 ='1' and s0 ='1' else
+	z <= 	in0 after 5ns when s2 = '0' and s1 ='0' and s0 ='0' and sControl ='0' else
+			in1 after 5ns when s2 = '0' and s1 ='0' and s0 ='1' and sControl ='0' else
+			in2 after 5ns when s2 = '0' and s1 ='1' and s0 ='0' and sControl ='0' else
+			in3 after 5ns when s2 = '0' and s1 ='1' and s0 ='1' and sControl ='0' else
+			in4 after 5ns when s2 = '1' and s1 ='0' and s0 ='0' and sControl ='0' else
+			in5 after 5ns when s2 = '1' and s1 ='0' and s0 ='1' and sControl ='0' else
+			in6 after 5ns when s2 = '1' and s1 ='1' and s0 ='0' and sControl ='0' else
+			in7 after 5ns when s2 = '1' and s1 ='1' and s0 ='1' and sControl ='0' else
+			in8 after 5ns when s2 = '0' and s1 ='0' and s0 ='0' and sControl ='1' else
 			x"0000" after 5ns;
 
 end Behavioral;

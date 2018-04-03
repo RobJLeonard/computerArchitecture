@@ -31,21 +31,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity decoder is
 	Port(
-			a0, a1, a2 : in STD_LOGIC;
-			q0, q1, q2, q3, q4, q5, q6, q7 : out STD_LOGIC
+			a0, a1, a2, aControl : in STD_LOGIC;
+			q0, q1, q2, q3, q4, q5, q6, q7, q8 : out STD_LOGIC
 		);
 end decoder;
 
 architecture Behavioral of decoder is
 
 begin
-	q0 <= ((not a2) and (not a1) and (not a0)) after 5ns;  --000
-	q1 <= ((not a2) and (not a1) and (a0)) after 5ns;		--001
-	q2 <= ((not a2) and (a1) and (not a0)) after 5ns;		--010
-	q3 <= ((not a2) and (a1) and (a0)) after 5ns;			--011
-	q4 <= ((a2) and (not a1) and (not a0)) after 5ns;		--100
-	q5 <= ((a2) and (not a1) and (a0)) after 5ns;			--101
-	q6 <= ((a2) and (a1) and (not a0)) after 5ns;			--110
-	q7 <= ((a2) and (a1) and (a0)) after 5ns;					--111
-
+	q0 <= ((not a2) and (not a1) and (not a0) and (not aControl)) after 5ns;    --0000
+	q1 <= ((not a2) and (not a1) and (a0) and (not aControl)) after 5ns;		--0010
+	q2 <= ((not a2) and (a1) and (not a0) and (not aControl)) after 5ns;		--0100
+	q3 <= ((not a2) and (a1) and (a0) and (not aControl)) after 5ns;			--0110
+	q4 <= ((a2) and (not a1) and (not a0) and (not aControl)) after 5ns;		--1000
+	q5 <= ((a2) and (not a1) and (a0) and (not aControl)) after 5ns;			--1010
+	q6 <= ((a2) and (a1) and (not a0) and (not aControl)) after 5ns;			--1100
+	q7 <= ((a2) and (a1) and (a0) and (not aControl)) after 5ns;				--1110
+    q8 <= ((not a2) and (not a1) and (not a0) and (aControl)) after 5ns;        --0001
 end Behavioral;

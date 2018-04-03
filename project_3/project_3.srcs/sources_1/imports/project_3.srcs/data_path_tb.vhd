@@ -30,6 +30,9 @@ architecture Behavioral of data_path_tb is
     -- declare component to test
     component data_path is
         Port ( 
+            TA : in std_logic;
+            TB : in std_logic;
+            TD : in std_logic;
 		    data_in : in std_logic_vector(15 downto 0);
 			constant_in : in std_logic_vector(15 downto 0);
 			a_address : in std_logic_vector(2 downto 0);
@@ -54,6 +57,7 @@ architecture Behavioral of data_path_tb is
 		    reg_5_data_out : out std_logic_vector(15 downto 0);
 		    reg_6_data_out : out std_logic_vector(15 downto 0);
 		    reg_7_data_out : out std_logic_vector(15 downto 0);
+		    reg_8_data_out : out std_logic_vector(15 downto 0);
 		    f_data_out : out std_logic_vector(15 downto 0)
 		);             
     end component;
@@ -71,6 +75,9 @@ architecture Behavioral of data_path_tb is
     signal clock : std_logic := '1';
     signal mb_select : std_logic := '0'; 
     signal md_select : std_logic := '0'; 
+    signal TA : std_logic := '0';
+    signal TB : std_logic := '0';
+    signal TD : std_logic := '0';
     
     --outputs
     signal v_out : std_logic := '0'; 
@@ -87,6 +94,7 @@ architecture Behavioral of data_path_tb is
     signal reg_5_data_out : std_logic_vector(15 downto 0) := x"0000";
     signal reg_6_data_out : std_logic_vector(15 downto 0) := x"0000";
     signal reg_7_data_out : std_logic_vector(15 downto 0) := x"0000";
+    signal reg_8_data_out : std_logic_vector(15 downto 0) := x"0000";
     signal f_data_out : std_logic_vector(15 downto 0) := x"0000";
         
     -- Clock definitions
@@ -97,6 +105,9 @@ begin
     -- UTT
     UUT: data_path
     Port Map(
+        TA => TA,
+        TB => TB,
+        TD => TD,
         data_in => data_in,
 		constant_in => constant_in,
 		a_address => a_address,
@@ -120,7 +131,8 @@ begin
 		reg_4_data_out => reg_4_data_out,
 		reg_5_data_out => reg_5_data_out,
 		reg_6_data_out => reg_6_data_out,
-		reg_7_data_out => reg_7_data_out,	
+		reg_7_data_out => reg_7_data_out,
+		reg_8_data_out => reg_8_data_out,		
 		f_data_out => f_data_out
     );
     
@@ -224,7 +236,19 @@ begin
         wait for 5ns;        
         write <= '1';
         wait for 5ns;
-        write <= '0'; 
+        write <= '0';
+        
+        --reg7
+        data_in <= x"0088";
+        wait for 5ns;
+        d_address <= "000";
+        TD <= '1';
+        wait for 5ns;        
+        write <= '1';
+        wait for 5ns;
+        write <= '0';
+        
+         
         
         ------------------------------------------------------------------ 
         

@@ -33,6 +33,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity data_path is
 	Port (
+	    TA : in std_logic;
+        TB : in std_logic;
+        TD : in std_logic;
 		data_in : in std_logic_vector(15 downto 0);
 		constant_in : in std_logic_vector(15 downto 0);
 		a_address : in std_logic_vector(2 downto 0);
@@ -48,8 +51,7 @@ entity data_path is
 		mb_select : in std_logic;
 		md_select : in std_logic;
 		bus_a_adr_out : out std_logic_vector(15 downto 0);
-		bus_b_data_out : out std_logic_vector(15 downto 0);
-		f_data_out : out std_logic_vector(15 downto 0);
+		bus_b_data_out : out std_logic_vector(15 downto 0);		
 		reg_0_data_out : out std_logic_vector(15 downto 0);
 		reg_1_data_out : out std_logic_vector(15 downto 0);
 		reg_2_data_out : out std_logic_vector(15 downto 0);
@@ -57,7 +59,9 @@ entity data_path is
 		reg_4_data_out : out std_logic_vector(15 downto 0);
 		reg_5_data_out : out std_logic_vector(15 downto 0);
 		reg_6_data_out : out std_logic_vector(15 downto 0);
-		reg_7_data_out : out std_logic_vector(15 downto 0)
+		reg_7_data_out : out std_logic_vector(15 downto 0);
+		reg_8_data_out : out std_logic_vector(15 downto 0);
+		f_data_out : out std_logic_vector(15 downto 0)
 	);
 end data_path;
 
@@ -71,8 +75,9 @@ architecture Behavioral of data_path is
 			b_select : in std_logic_vector(2 downto 0);
 			des_select : in std_logic_vector(2 downto 0);
 			write, clk 	: in STD_LOGIC;
+			TA,TB,TD : in STD_LOGIC;
             data    : in STD_LOGIC_VECTOR(15 downto 0);
-			reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7 : out STD_LOGIC_VECTOR(15 downto 0);
+			reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7, reg8 : out STD_LOGIC_VECTOR(15 downto 0);
             a_reg, b_reg : out STD_LOGIC_VECTOR(15 downto 0)
 		);
 	end component;
@@ -103,12 +108,15 @@ architecture Behavioral of data_path is
 	
 	-- signals
 	signal a_data, b_data, mb_out, f_out, md_out, reg0out, reg1out, reg2out, reg3out, reg4out, 
-	           reg5out, reg6out, reg7out: std_logic_vector(15 downto 0);
+	           reg5out, reg6out, reg7out, instructionReg_out: std_logic_vector(15 downto 0);
 		
 	begin
 	
 	-- Register File
 	reg_file: register_file PORT MAP(
+	          TA => TA,
+	          TB => TB,
+	          TD => TD,
               a_select => a_address,
               b_select => b_address,
               des_select => d_address,
@@ -123,6 +131,7 @@ architecture Behavioral of data_path is
               reg5 => reg5out,
               reg6 => reg6out,
               reg7 => reg7out,
+              reg8 => instructionReg_out,
               a_reg => a_data,
               b_reg => b_data
             );
@@ -167,5 +176,6 @@ architecture Behavioral of data_path is
 	reg_5_data_out <= reg5out;
 	reg_6_data_out <= reg6out;
 	reg_7_data_out <= reg7out;
+	reg_8_data_out <= instructionReg_out;
 	 
 end Behavioral;

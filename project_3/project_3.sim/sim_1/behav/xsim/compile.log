@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Roble/Desktop/vivado/project_3/project_3.srcs/sources_1/imports/project_3.srcs/mux_2_16.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity mux_2_16
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Roble/Desktop/vivado/project_3/project_3.srcs/sources_1/imports/project_3.srcs/register_file.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity register_file
