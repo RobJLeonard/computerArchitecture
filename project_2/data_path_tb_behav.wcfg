@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="data_path_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="data_path_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="849670000fs"></ZoomStartTime>
+      <ZoomEndTime time="1004670001fs"></ZoomEndTime>
+      <Cursor1Time time="835167000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/data_path_tb/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/constant_in" type="array">
+      <obj_property name="ElementShortName">constant_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">constant_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/a_address" type="array">
+      <obj_property name="ElementShortName">a_address[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a_address[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/b_address" type="array">
+      <obj_property name="ElementShortName">b_address[2:0]</obj_property>
+      <obj_property name="ObjectShortName">b_address[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/d_address" type="array">
+      <obj_property name="ElementShortName">d_address[2:0]</obj_property>
+      <obj_property name="ObjectShortName">d_address[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/FS" type="array">
+      <obj_property name="ElementShortName">FS[4:0]</obj_property>
+      <obj_property name="ObjectShortName">FS[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/write" type="logic">
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/mb_select" type="logic">
+      <obj_property name="ElementShortName">mb_select</obj_property>
+      <obj_property name="ObjectShortName">mb_select</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/md_select" type="logic">
+      <obj_property name="ElementShortName">md_select</obj_property>
+      <obj_property name="ObjectShortName">md_select</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/v_out" type="logic">
+      <obj_property name="ElementShortName">v_out</obj_property>
+      <obj_property name="ObjectShortName">v_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/c_out" type="logic">
+      <obj_property name="ElementShortName">c_out</obj_property>
+      <obj_property name="ObjectShortName">c_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/n_out" type="logic">
+      <obj_property name="ElementShortName">n_out</obj_property>
+      <obj_property name="ObjectShortName">n_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/z_out" type="logic">
+      <obj_property name="ElementShortName">z_out</obj_property>
+      <obj_property name="ObjectShortName">z_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/f_data_out" type="array">
+      <obj_property name="ElementShortName">f_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">f_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/bus_a_adr_out" type="array">
+      <obj_property name="ElementShortName">bus_a_adr_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_a_adr_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/bus_b_data_out" type="array">
+      <obj_property name="ElementShortName">bus_b_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_b_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/reg_0_data_out" type="array">
+      <obj_property name="ElementShortName">reg_0_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_0_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/reg_1_data_out" type="array">
+      <obj_property name="ElementShortName">reg_1_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_1_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/reg_2_data_out" type="array">
+      <obj_property name="ElementShortName">reg_2_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_2_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/reg_3_data_out" type="array">
+      <obj_property name="ElementShortName">reg_3_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_3_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/reg_4_data_out" type="array">
+      <obj_property name="ElementShortName">reg_4_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_4_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/reg_5_data_out" type="array">
+      <obj_property name="ElementShortName">reg_5_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_5_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/reg_6_data_out" type="array">
+      <obj_property name="ElementShortName">reg_6_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_6_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/reg_7_data_out" type="array">
+      <obj_property name="ElementShortName">reg_7_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_7_data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_path_tb/clock_period" type="other">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+</wave_config>
